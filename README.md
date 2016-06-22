@@ -1,6 +1,7 @@
 # SimpleMysql
 Simplify MySQL implementation
 
+
 ## Getting Started
 
 ```
@@ -13,12 +14,15 @@ foreach (DataRow row in result.Rows)
 mysql.Dispose();
 ```
 
+
 ### Prerequisities
 
 .NET Framework 4
 
+
 ### Installing
 
+https://www.nuget.org/packages/SimpleMysql/
 
 
 ## Built With

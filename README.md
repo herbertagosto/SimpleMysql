@@ -25,3 +25,9 @@ mysql.Dispose();
 
 visual studio 2013
 
+
+## License
+
+https://github.com/herbertagosto/SimpleMysql/blob/master/LICENSE_3RD_PARTY
+https://github.com/herbertagosto/SimpleMysql/blob/master/LICENSE
+

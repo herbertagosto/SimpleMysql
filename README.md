@@ -1,4 +1,6 @@
 # SimpleMysql
+[![Build status](https://ci.appveyor.com/api/projects/status/ekvoqaqerr68ij6u?svg=true)](https://ci.appveyor.com/project/herbertagosto/simplemysql)
+
 Simplify MySQL implementation
 
 

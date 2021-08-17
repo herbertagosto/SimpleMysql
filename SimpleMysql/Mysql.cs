@@ -14,7 +14,7 @@ namespace SimpleMysql
     /// <summary>
     /// Simplify MySQL implementation
     /// </summary>
-    public class Mysql: IDisposable
+    public class Mysql : IDisposable
     {
         private MySqlConnection conn;
         private Culture culture;
@@ -31,6 +31,16 @@ namespace SimpleMysql
 
             string connStr = string.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};", server, database, username, userpassword);
             conn = new MySqlConnection(connStr);
+            Open();
+        }
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="connectionString">Connection string. Sample ""</param>
+        public Mysql(string connectionString)
+        {
+            culture = new Culture();
+            conn = new MySqlConnection(connectionString);
             Open();
         }
 
@@ -93,10 +103,10 @@ namespace SimpleMysql
             conn.Close();
         }
         #endregion
-        
-        
 
-        
+
+
+
 
         #region DISPOSE
         /// <summary>

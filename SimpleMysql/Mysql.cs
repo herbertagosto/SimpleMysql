@@ -61,6 +61,35 @@ namespace SimpleMysql
             }
             return ret;
         }
+
+        /// <summary>
+        /// Query method. Write to file
+        /// </summary>
+        /// <param name="query">Sample "SELECT * FROM database.table"</param>
+        /// <param name="path">file path</param>
+        /// <returns></returns>
+        public void Query(string query, string path)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
+                {
+                    var cmd = new MySqlCommand(query, conn);
+                    cmd.CommandTimeout = 99999;
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var items = new List<string>();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            items.Add(reader.GetString(i));
+                        }
+                        file.WriteLine(string.Join("|", items));
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Non Query method. Use for INSERT,etc. Returns Integer
         /// </summary>

@@ -79,10 +79,10 @@ namespace SimpleMysql
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        var items = new List<string>();
+                        string[] items = new string[reader.FieldCount];
                         for (int i = 0; i < reader.FieldCount; i++)
                         {
-                            items.Add(reader.GetString(i));
+                            items[i] = reader.GetString(i);
                         }
                         file.WriteLine(string.Join("|", items));
                     }

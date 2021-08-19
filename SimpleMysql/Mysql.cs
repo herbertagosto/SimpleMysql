@@ -82,7 +82,14 @@ namespace SimpleMysql
                         string[] items = new string[reader.FieldCount];
                         for (int i = 0; i < reader.FieldCount; i++)
                         {
-                            items[i] = reader.GetString(i);
+                            if (reader.IsDBNull(i))
+                            {
+                                items[i] = string.Empty;
+                            }
+                            else
+                            {
+                                items[i] = reader.GetString(i);
+                            }
                         }
                         file.WriteLine(string.Join("|", items));
                     }

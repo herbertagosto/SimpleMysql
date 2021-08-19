@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleMysql</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleMysql.Mysql">
+            <summary>
+            Simplify MySQL implementation
+            </summary>
+        </member>
+        <member name="M:SimpleMysql.Mysql.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="server">Server name. Sample "127.0.0.1"</param>
+            <param name="database">Database name</param>
+            <param name="username">User name</param>
+            <param name="userpassword">Password</param>
+        </member>
+        <member name="M:SimpleMysql.Mysql.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="connectionString">Connection string. Sample ""</param>
+        </member>
+        <member name="M:SimpleMysql.Mysql.Query(System.String)">
+            <summary>
+            Query method. Returns DataTable
+            </summary>
+            <param name="query">Sample "SELECT * FROM database.table"</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleMysql.Mysql.Query(System.String,System.String)">
+            <summary>
+            Query method. Write to file
+            </summary>
+            <param name="query">Sample "SELECT * FROM database.table"</param>
+            <param name="path">file path</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleMysql.Mysql.ExecNonQuery(System.String)">
+            <summary>
+            Non Query method. Use for INSERT,etc. Returns Integer
+            </summary>
+            <param name="query">Sample "INSERT INTO table VALUES (value1,value2,value3,...);"</param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleMysql.Mysql.Finalize">
+            <summary>
+            Dispose when class instance was distruct
+            </summary>
+        </member>
+        <member name="M:SimpleMysql.Mysql.Dispose">
+            <summary>
+            Dispose class
+            </summary>
+        </member>
+        <member name="M:SimpleMysql.Mysql.Dispose(System.Boolean)">
+            <summary>
+            Dispose classe
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,7 @@ namespace SimpleMysql
                             }
                             else
                             {
-                                items[i] = reader.GetString(i);
+                                items[i] = reader[i].ToString();
                             }
                         }
                         file.WriteLine(string.Join("|", items));

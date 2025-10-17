@@ -2,19 +2,19 @@
 <package >
   <metadata>
     <id>SimpleMysql</id>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <authors>Herbert G. Agosto</authors>
     <owners>Herbert G. Agosto</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/herbertagosto/SimpleMysql</projectUrl>
     <description>Simplify MySQL implementation</description>
-    <releaseNotes>Support null column</releaseNotes>
+    <releaseNotes>Update MySQL version to 9.4.0</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>MySQL Simple</tags>
     <dependencies>
       <dependency id="HCulture" version="1.0.2" />
-	  <dependency id="MySql.Data" version="6.9.8" />
+	  <dependency id="MySql.Data" version="9.4.0" />
     </dependencies>
   </metadata>
 </package>

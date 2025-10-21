@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>SimpleMysql</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <authors>Herbert G. Agosto</authors>
     <owners>Herbert G. Agosto</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/herbertagosto/SimpleMysql</projectUrl>
     <description>Simplify MySQL implementation</description>
-    <releaseNotes>Update MySQL version to 9.4.0</releaseNotes>
+    <releaseNotes>Add default command timeout</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>MySQL Simple</tags>
     <dependencies>

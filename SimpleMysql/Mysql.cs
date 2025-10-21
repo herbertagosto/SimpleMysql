@@ -26,11 +26,12 @@ namespace SimpleMysql
         /// <param name="database">Database name</param>
         /// <param name="username">User name</param>
         /// <param name="userpassword">Password</param>
-        public Mysql(string server, string database, string username, string userpassword)
+        /// <param name="defaultCommandTimeout"></param>
+        public Mysql(string server, string database, string username, string userpassword, int defaultCommandTimeout = 1800)
         {
             culture = new Culture();
 
-            string connStr = string.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};", server, database, username, userpassword);
+            string connStr = string.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};default command timeout={4};", server, database, username, userpassword, defaultCommandTimeout);
             conn = new MySqlConnection(connStr);
             Open();
         }

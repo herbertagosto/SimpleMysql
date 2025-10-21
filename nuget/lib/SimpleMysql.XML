@@ -9,7 +9,7 @@
             Simplify MySQL implementation
             </summary>
         </member>
-        <member name="M:SimpleMysql.Mysql.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:SimpleMysql.Mysql.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             Constructor
             </summary>
@@ -17,6 +17,7 @@
             <param name="database">Database name</param>
             <param name="username">User name</param>
             <param name="userpassword">Password</param>
+            <param name="defaultCommandTimeout"></param>
         </member>
         <member name="M:SimpleMysql.Mysql.#ctor(System.String)">
             <summary>
